@@ -8,8 +8,12 @@ class RootController < ApplicationController
         render json: @response
     end
 
-    def product
-        render json: params[:id]
-    end
+    def addBeer
+        @beer = Beer.new(:title => params[:title], :description => params[:description])
+        if @beer.save
+            return render json: true
+        end
 
+        return render json: @beer.errors.full_messages
+    end
 end
