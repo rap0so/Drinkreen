@@ -1,0 +1,33 @@
+<%= render "navbar" %>
+
+<h1 class="text-5xl text-center my-5">Add a new beer</h1>
+<form action="/api/add" method="POST">
+  <%= token_tag %>
+  <div class="d-flex justify-center px-3 mt-14">
+    <div class="w-100 md:w-2/4">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          value="test title"
+          class="form-control"
+          id="title"
+          name="title"
+          placeholder="Black sip"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          class="form-control"
+          id="description"
+          name="description"
+          rows="3"
+        >
+test description</textarea
+        >
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
