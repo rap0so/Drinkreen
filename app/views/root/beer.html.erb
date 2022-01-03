@@ -1,0 +1,25 @@
+<%= render "navbar" %>
+
+<div class="container">
+  <h1 class="text-5xl text-center my-5"><%= @thisBeer.title %></h1>
+  <div class="d-flex justify-content-center mb-4">
+    <p class="lead text-center" style="max-width: 500px">
+      <%= @thisBeer.description %>
+    </p>
+  </div>
+
+  <div
+    class="d-flex flex-column justify-content-center mb-4 mx-auto"
+    style="max-width: 500px"
+  >
+    <p class="lead mb-0 text-center">Hey, do u wanna know more?</p>
+
+    <p class="lead mb-0 text-center" style="max-width: 500px">
+      Would you like to try it?
+    </p>
+
+    <p class="lead mb-0 text-center" style="max-width: 500px">
+      Get in touch with one of our bars
+    </p>
+  </div>
+</div>
