@@ -1,24 +1,20 @@
-# README
+<h1 align="center">Welcome to Drinkreen 🍺🌵</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+</p>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> It's my first ruby on rails project, first contact with ruby too
 
-Things you may want to cover:
+## Usage
 
-* Ruby version
+```sh
+rails s
+```
 
-* System dependencies
+## Author
 
-* Configuration
+👤 **William G**
 
-* Database creation
+* Github: [@Rap0so](https://github.com/Rap0so)
+* LinkedIn: [@https:\/\/www.linkedin.com\/in\/w-godoy](https://linkedin.com/in/https:\/\/www.linkedin.com\/in\/w-godoy)
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
