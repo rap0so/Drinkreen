@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   get '/beer/new', to: 'root#new-beer'
   get '/beer/:id', to: 'root#beer'
   get '/contact', to: 'root#contact'
+  get '/find-beer', to: 'root#findBeer'
+  get '/update/:id', to: 'root#update'
 
   post '/api/add', to: 'root#addBeer'
-  get '/find-beer', to: 'root#findBeer'
+  post '/api/update/:id', to: 'root#updateBeer'
   
 
 end
