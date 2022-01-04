@@ -18,6 +18,11 @@ class RootController < ApplicationController
         render "beer"
     end
 
+    def update
+        @thisBeer = Beer.find(params[:id])
+        render "update"
+    end
+
     def findBeer
         @beers = Beer.where("title LIKE ?", "%" + params[:query] + "%")
         render "find-beer"
@@ -27,6 +32,20 @@ class RootController < ApplicationController
         @beer = Beer.new(:title => params[:title], :description => params[:description])
         if @beer.save
             return redirect_to "/home"
+        end
+
+        return render json: @beer.errors.full_messages
+    end
+
+    def updateBeer
+        @beerId = params[:id]
+        @beer = Beer.find(@beerId)
+
+        @beer.title = params[:title]
+        @beer.description = params[:description]
+        
+        if @beer.save
+            return redirect_to "/beer/" + @beerId
         end
 
         return render json: @beer.errors.full_messages
